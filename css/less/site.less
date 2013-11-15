@@ -1,0 +1,123 @@
+@import "bootstrap/bootstrap.less";
+
+// .test {
+//     margin-top: 102px;
+//     background-color: #71BE44;
+//     width: 90%;
+//     height: 422px;
+//     position: absolute;
+// }
+
+// Whole site
+
+@text-color: #742D91;
+@hey-green: #D3DE25;
+
+body {
+    padding-top:  50px;
+    background-image: url('/imgs/background.png');
+}
+
+.anchor {
+    position: relative;
+    top: -50px;
+}
+
+// navbar
+.navbar {
+    background: rgba(200, 200, 200, 0.8);
+}
+
+.navbar .active a {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+// Home row
+.sp {
+    color: @hey-green;
+}
+
+@media (min-width: @screen-md-min) {
+    .vertical-center {
+        vertical-align: middle;
+    }
+
+    .vertical-center .list-group {
+      margin: 50% 0 0 0;
+
+      position: absolute;
+      height: 100px;
+    }
+
+    .overlap-md > div {
+        top: -20px;
+    }
+}
+
+.list-group-item,
+.list-group-item .label {
+    font-size: 25px;
+}
+
+#carousel-home {
+    box-shadow: -3px 3px 0px 2px #61A744;
+    margin: 0 0 10px 0;
+}
+
+.carousel-caption {
+    color: #742D91;
+    font-size: 35px;
+    text-shadow: none;
+}
+
+.carousel-indicators .active {
+    background-color: #742D91;
+}
+
+.carousel img {
+            -webkit-filter: saturate(70%);
+}
+
+
+#ytplayer embed {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#ytplayer {
+    box-shadow: -3px 3px 0px 2px #652A7E;
+}
+
+div.fb-like-box,
+div.fb-like-box > span,
+div.fb-like-box > span > iframe[style],
+div.fb-comments,
+div.fb-comments > span,
+div.fb-comments > span > iframe[style] {
+    width: 100% !important;
+}
+
+.fb-like-box {
+    border: 5px solid #2FACE2;
+    box-shadow: -3px 3px 0px 2px #2796C7;
+    background-color: white;
+}
+
+// schedule
+
+#gcal {
+    width: 100% !important;
+}
+
+@media (max-width: @screen-sm-max) {
+    #gcal {
+        height: 400px !important;
+    }
+}
