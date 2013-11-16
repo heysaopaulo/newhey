@@ -10,12 +10,82 @@
 
 // Whole site
 
+@font-face {
+    font-family: 'walsheim';
+    src: url('/myfonts/walsheim.eot');
+    src: url('/myfonts/walsheim.eot?#iefix') format('embedded-opentype'),
+         url('/myfonts/walsheim.woff') format('woff'),
+         url('/myfonts/walsheim.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'f-Black';
+  src: url("/myfonts/f-Black.eot");
+  src: local("☺"), url("/myfonts/f-Black.woff") format("woff"), url("/myfonts/f-Black.ttf") format("truetype"), url("/myfonts/f-Black.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'f-Book';
+  src: url("/myfonts/f-Book.eot");
+  src: local("☺"), url("/myfonts/f-Book.woff") format("woff"), url("/myfonts/f-Book.ttf") format("truetype"), url("/myfonts/f-Book.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'smudger';
+    src: url('/myfonts/smudgerlet.eot');
+    src: url('/myfonts/smudgerlet.eot') format('embedded-opentype'),
+         url('/myfonts/smudgerlet.woff') format('woff'),
+         url('/myfonts/smudgerlet.ttf') format('truetype');
+}
+
+.mylabel {
+  display: inline;
+  padding: .1em .2em .2em .3em;
+  font-size: 130%;
+  // font-weight: bold;
+  // line-height: 1;
+  // color: @label-color;
+  color: @text-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: center;
+  border-radius: 50%;
+  background-color: @hey-blue-light;
+  box-shadow: 1px -1px 0px 1px #2796C7;
+
+  // Add hover effects, but only for links
+  &[href] {
+    &:hover,
+    &:focus {
+      color: @label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+
 @text-color: #742D91;
 @hey-green: #D3DE25;
+@hey-orange: #F3702E;
+@hey-blue-light: #2FACE2;
 
 body {
+    font-family: 'f-Book';
     padding-top:  50px;
     background-image: url('/imgs/background.png');
+    letter-spacing: 0.0625em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'f-Black';
+    letter-spacing: 0.0625em;
 }
 
 .anchor {
@@ -33,34 +103,56 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 60px;
 }
 
 // Home row
+
+.logo {
+    font-size: 80px;
+    padding-bottom: 10px;
+}
+
+.hey {
+    font-family: 'walsheim';
+}
+
 .sp {
     color: @hey-green;
+    letter-spacing: 0.5;
+}
+
+.oh {
+    margin-top: -90px;
+}
+
+.oh > h1 {
+    font-size: 140px;
+    // font-family: 'Arial';
+    text-shadow: -3px 3px 0 darken(@text-color, 10%);
+}
+
+.vem {
+    font-size: 34px;
+    margin-top: 30px;
+    color: @hey-orange;
+}
+
+.menu > li,
+.menu > li > a {
+    font-family: "f-Black";
+    font-size: 30px !important;
+    color: @text-color !important;
 }
 
 @media (min-width: @screen-md-min) {
-    .vertical-center {
-        vertical-align: middle;
-    }
-
-    .vertical-center .list-group {
-      margin: 50% 0 0 0;
-
-      position: absolute;
-      height: 100px;
+    .vemd {
+        margin-top: -70px;
     }
 
     .overlap-md > div {
-        top: -20px;
+        margin-top: -20px;
     }
-}
-
-.list-group-item,
-.list-group-item .label {
-    font-size: 25px;
 }
 
 #carousel-home {
@@ -69,9 +161,12 @@ h1 {
 }
 
 .carousel-caption {
+    padding-bottom: 0;
     color: #742D91;
-    font-size: 35px;
+    font-size: 65px;
     text-shadow: none;
+    font-family: 'smudger';
+    line-height: 0.9;
 }
 
 .carousel-indicators .active {
@@ -79,7 +174,7 @@ h1 {
 }
 
 .carousel img {
-            -webkit-filter: saturate(70%);
+    -webkit-filter: saturate(70%);
 }
 
 
@@ -93,6 +188,10 @@ h1 {
 
 #ytplayer {
     box-shadow: -3px 3px 0px 2px #652A7E;
+}
+
+div.fb-like-box {
+    margin-left: -20px;
 }
 
 div.fb-like-box,
