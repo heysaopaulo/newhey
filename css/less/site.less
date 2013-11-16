@@ -45,8 +45,8 @@
 }
 
 .mylabel {
-  display: inline;
-  padding: .1em .2em .2em .3em;
+  display: inline-block;
+  padding: .25em 0 0 .1em;
   font-size: 130%;
   // font-weight: bold;
   // line-height: 1;
@@ -54,7 +54,9 @@
   color: @text-color;
   text-align: center;
   white-space: nowrap;
-  vertical-align: center;
+  vertical-align: middle;
+  width: 1.5em !important;
+  height: 1.5em !important;
   border-radius: 50%;
   background-color: @hey-blue-light;
   box-shadow: 1px -1px 0px 1px #2796C7;
@@ -93,13 +95,29 @@ h1, h2, h3, h4, h5, h6 {
     top: -50px;
 }
 
-// navbar
-.navbar {
-    background: rgba(200, 200, 200, 0.8);
+.pagestart {
+    padding-top: 80px;
 }
 
-.navbar .active a {
-    background: rgba(255, 255, 255, 0.3) !important;
+.last {
+    padding-bottom: 80px;
+}
+
+// ------------ navbar ------------
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #000 !important;
+    background-color: inherit;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 h1 {
