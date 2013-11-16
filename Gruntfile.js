@@ -39,16 +39,8 @@ module.exports = function (grunt) {
         connect: {
             all: {
                 options: {
-                    debug: false
+                    hostname: '*'
                 }
-            }
-        },
-
-        devserver:  {
-            server: {},
-            options: {
-                port : 8000,
-                async: false
             }
         },
 
@@ -63,7 +55,6 @@ module.exports = function (grunt) {
 
     // Load tasks so we can use them
     grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks('grunt-devserver')
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-less");
