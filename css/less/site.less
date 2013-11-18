@@ -8,7 +8,7 @@
 //     position: absolute;
 // }
 
-// Whole site
+// ------------ Whole site ------------
 
 @font-face {
     font-family: 'walsheim';
@@ -47,7 +47,7 @@
 .mylabel {
   display: inline-block;
   padding: .25em 0 0 .1em;
-  font-size: 130%;
+  // font-size: 130%;
   // font-weight: bold;
   // line-height: 1;
   // color: @label-color;
@@ -74,9 +74,27 @@
 
 
 @text-color: #742D91;
-@hey-green: #D3DE25;
+@carousel-control-color: @text-color;
+@carousel-caption-color: @text-color;
+@carousel-indicator-border-color: @text-color;
+@carousel-indicator-active-bg: @text-color;
+@hey-yellow: #D3DE25;
 @hey-orange: #F3702E;
 @hey-blue-light: #2FACE2;
+@hey-green: #71BE44;
+@hey-pink: #EC218D;
+
+.pink {
+    color: @hey-pink;
+}
+
+.yellow {
+    color: @hey-yellow;
+}
+
+.orange {
+    color: @hey-orange;
+}
 
 body {
     font-family: 'f-Book';
@@ -91,12 +109,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .anchor {
+    display: block;
     position: relative;
     top: -50px;
+    visibility: hidden;
+    width: 100%;
 }
 
 .pagestart {
-    padding-top: 80px;
+    padding-top: 150px;
 }
 
 .last {
@@ -124,7 +145,7 @@ h1 {
     font-size: 60px;
 }
 
-// Home row
+// ------------ Home row ------------
 
 .logo {
     font-size: 80px;
@@ -136,7 +157,7 @@ h1 {
 }
 
 .sp {
-    color: @hey-green;
+    color: @hey-yellow;
     letter-spacing: 0.5;
 }
 
@@ -180,19 +201,14 @@ h1 {
 
 .carousel-caption {
     padding-bottom: 0;
-    color: #742D91;
     font-size: 65px;
     text-shadow: none;
     font-family: 'smudger';
     line-height: 0.9;
 }
 
-.carousel-indicators .active {
-    background-color: #742D91;
-}
-
-.carousel img {
-    -webkit-filter: saturate(70%);
+#carousel-home img {
+    -webkit-filter: saturate(60%);
 }
 
 
@@ -227,14 +243,104 @@ div.fb-comments > span > iframe[style] {
     background-color: white;
 }
 
-// schedule
+// ------------ info ------------
+
+blockquote,
+blockquote p {
+    font-size: 24px;
+    color: @hey-pink;
+}
+
+blockquote small {
+    color: desaturate(#EC218D, 20%);
+}
+
+.info {
+    font-size: 100px;
+    text-shadow: -2px 2px 0 darken(@hey-yellow, 10%);
+}
+
+.infobox:after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 0;
+    height: 70%;
+    width: 20px;
+    border-left: 4px solid @hey-blue-light;
+}
+
+// ------------ schedule ------------
+
+.titlebox {
+    background-color: @hey-green;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    box-shadow: -3px 3px 0px 2px darken(@hey-green, 10%);
+}
+
+.schedrow {
+    margin-top: -180px;
+}
+
+.schedbox {
+    color: white;
+    background-color: @hey-green;
+    box-shadow: -3px 3px 0px 2px darken(@hey-green, 10%);
+}
+
+// .schedbox:after {
+//     content: "";
+//     position: absolute;
+//     width: 0;
+//     height: 0;
+//     // border-top: 50% solid transparent;
+//     border-bottom: 300px solid transparent;
+//     border-left: 300px solid @hey-green;
+// }
 
 #gcal {
     width: 100% !important;
+    background-color: @text-color;
+    padding: 5px 8px;
+    box-shadow: -3px 3px 0px 2px darken(@text-color, 10%);
 }
 
 @media (max-width: @screen-sm-max) {
     #gcal {
         height: 400px !important;
     }
+}
+
+// ------------ pics ------------
+
+.veja {
+    font-family: 'smudger';
+    font-size: 40px;
+}
+
+.picsthumbs {
+    margin-top: 20px;
+}
+
+.purplebox,
+.picsthumbs > div > img {
+    background-color: @text-color;
+    padding: 5px 8px;
+    box-shadow: -3px 3px 0px 2px darken(@text-color, 10%);
+}
+
+// ------------ contact ------------
+
+.contato {
+    background-color: @hey-yellow;
+    box-shadow: -3px 3px 0px 2px darken(@hey-yellow, 10%);
+}
+
+.partner > div > img {
+    box-shadow: -2px 2px 0px 1px darken(#ccc, 10%);
+}
+
+.partner {
+    margin-top: 20px;
 }
