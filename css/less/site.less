@@ -294,42 +294,71 @@ blockquote small {
 //     border-bottom: 5px solid darken(@hey-green, 10%);
 // }
 
-.titlebox {
-    // background-color: @hey-green;
-    // padding-top: -10px;
-    // padding-bottom: 200px;
-    // border-bottom: 5px solid darken(@hey-green, 10%);
+.schedrow {
+    margin-top: -150px;
 }
 
-// .greens {
-//     // margin-top: -180px;
-//     padding: 0;
-//     border: 0;
-//     margin: 0;
-//     background: url('/imgs/greenbox.svg');
-//     background-size: 122% 100%;
-//     background-position: -250px 0;
-//     background-repeat: no-repeat;
-// }
+.pstart {
+    padding-top: -50px
+}
+.schedtitle {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
 
-// .greens:before {
-//     content: "";
-//     position: absolute;
-//     right: 80%;
-//     width: 9999px;
-//     height: 105%;
-//     background-color: @hey-green;
-//     border-bottom: 5px solid darken(@hey-green, 10%);
-// }
+.schedtitle,
+.schedtitle:before,
+.schedtitle:after,
+.schedside,
+.schedside:before,
+.schedside:after {
+    background-color: @hey-green;
+    box-shadow: 3px 3px 0px 2px darken(@hey-green, 10%);
+}
+
+.schedtitle:after,
+.schedtitle:before,
+.schedside:after,
+.schedside:before {
+    content: "";
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+
+.schedtitle:before,
+.schedside:before {
+    z-index: -1;
+}
+
+
+.schedtitle:after {
+    top: 0;
+    left: 100%;
+}
+
+.schedtitle:before {
+    top: 0;
+    right: 100%;
+}
+
+.schedside:after {
+    top: 100%;
+    right: 0;
+}
+
+.schedside:before {
+    right: 100%;
+}
+
 
 html, body {
     overflow-x: hidden;
 }
-.schedbox {
+.schedside {
     color: white;
-    // background-color: @hey-green;
-    // border-bottom: 5px solid darken(@hey-green, 10%);
-    // padding-bottom: 300px;
+    background-color: @hey-green;
+    padding-bottom: 200px;
 }
 
 // .schedbox:after {
@@ -377,7 +406,7 @@ html, body {
 
 .contato {
     background-color: @hey-yellow;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     box-shadow: 3px 3px 0px 2px darken(@hey-yellow, 10%);
 }
 
@@ -416,7 +445,6 @@ html, body {
     background-color: @hey-yellow;
     box-shadow: 3px 3px 0px 2px darken(@hey-yellow, 10%);
     z-index: -10;
-    // border-bottom: 5px solid darken(@hey-green, 10%);
 }
 
 .c2:after {
@@ -429,7 +457,6 @@ html, body {
     background-color: @hey-yellow;
     box-shadow: 3px 3px 0px 2px darken(@hey-yellow, 10%);
     z-index: -100;
-    // border-bottom: 5px solid darken(@hey-green, 10%);
 }
 
 .send {
@@ -441,6 +468,11 @@ html, body {
 .partner > div > img {
     box-shadow: -2px 2px 0px 1px darken(#ccc, 10%);
 }
+
+.first {
+    margin-top: 100px !important;
+}
+
 
 .partner {
     margin-top: 20px;
