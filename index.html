@@ -40,7 +40,7 @@
     <div class="row">
         <span class="anchor" id="home">&nbsp;</span>
         <div class="col-md-7 col-md-offset-5">
-            <h1 class="logo"><span class="hey">HEY!</span><span class="sp">SãoPaulo</span></h1>
+            <h1 class="logo"><span class="hey">HEY!</span><wbr><span class="sp">SãoPaulo</span></h1>
         </div>
     </div>
     <div class="row">
@@ -193,8 +193,8 @@
         <div class="col-md-4">
             <h1><span class="mylabel glyphicon glyphicon-camera"></span>&nbsp;fotos</h1>
         </div>
-        <div class="col-md-5 col-md-offset-3">
-            <h3 class="orange veja">Veja algumas fotos de&nbsp;nossos&nbsp;tours</h3>
+        <div class="col-md-5 pull-right">
+            <h3 class="orange veja">Veja&nbsp;algumas&nbsp;fotos de&nbsp;nossos&nbsp;tours</h3>
         </div>
     </div>
    <div class="row">
@@ -340,6 +340,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="js/vendor/jquery.fitvids.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js"></script>
+<script>
+$(function() {
+    $('.navbar').bind('click', 'ul li a', function(event) {
+        $.scrollTo(event.target.hash, 250);
+        event.preventDefault();
+    });
+});
+</script>
 <script src="js/vendor/bootstrap.js"></script>
 <script src="js/main.js"></script>
 <div id="fb-root"></div>
