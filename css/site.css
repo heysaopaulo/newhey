@@ -1618,7 +1618,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #555555;
+  color: #742d91;
   vertical-align: middle;
 }
 .form-control {
@@ -1628,12 +1628,12 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #555555;
+  color: #742d91;
   vertical-align: middle;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -1646,16 +1646,16 @@ output {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control:-moz-placeholder {
-  color: #999999;
+  color: #d2a6e4;
 }
 .form-control::-moz-placeholder {
-  color: #999999;
+  color: #d2a6e4;
 }
 .form-control:-ms-input-placeholder {
-  color: #999999;
+  color: #d2a6e4;
 }
 .form-control::-webkit-input-placeholder {
-  color: #999999;
+  color: #d2a6e4;
 }
 .form-control[disabled],
 .form-control[readonly],
@@ -3302,7 +3302,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #742d91;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
@@ -6063,7 +6063,9 @@ h1 {
   font-size: 60px;
 }
 .logo {
-  padding-bottom: 20px;
+  margin-top: -30px;
+  padding-bottom: 50px;
+  height: 100px;
 }
 .oh {
   margin-top: -68px;
@@ -6081,7 +6083,7 @@ h1 {
   color: #742d91 !important;
 }
 .list-icon {
-  width: 1.5em;
+  width: 2em;
 }
 @media (min-width: 992px) {
   .vemd {
@@ -6104,9 +6106,6 @@ h1 {
   text-shadow: none;
   font-family: 'smudger';
   line-height: 0.9;
-}
-#carousel-home img {
-  -webkit-filter: saturate(60%);
 }
 #ytplayer {
   box-shadow: -3px 3px 0px 2px #652a7e;
@@ -6237,10 +6236,20 @@ body {
   box-shadow: 3px 3px 0px 2px #acb51b;
   z-index: -100;
 }
+.c2 h3 {
+  font-family: "f-Book";
+}
 .send {
   background-color: #2face2;
   color: #d3de25;
   font-family: "f-Black";
+  border-radius: 50%;
+  padding: 4px;
+  margin-bottom: 2px;
+  margin-left: -20px;
+  box-shadow: 1px -1px 0px 1px #2796c7;
+  position: absolute;
+  bottom: 0;
 }
 .partner > div > img {
   box-shadow: -2px 2px 0px 1px #b3b3b3;
