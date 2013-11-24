@@ -6016,25 +6016,6 @@ td.visible-print {
   src: url('../myfonts/smudgerlet.eot');
   src: url('../myfonts/smudgerlet.eot') format('embedded-opentype'), url('../myfonts/smudgerlet.woff') format('woff'), url('../myfonts/smudgerlet.ttf') format('truetype');
 }
-.mylabel {
-  display: inline-block;
-  padding: .25em 0 0 .1em;
-  color: #742d91;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  width: 1.5em !important;
-  height: 1.5em !important;
-  border-radius: 50%;
-  background-color: #2face2;
-  box-shadow: 1px -1px 0px 1px #2796c7;
-}
-.mylabel[href]:hover,
-.mylabel[href]:focus {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
 .pink {
   color: #ec218d;
 }
@@ -6048,7 +6029,6 @@ body {
   font-family: 'f-Book';
   padding-top: 50px;
   background-image: url('/imgs/background.png');
-  letter-spacing: 0.0625em;
 }
 h1,
 h2,
@@ -6057,17 +6037,11 @@ h4,
 h5,
 h6 {
   font-family: 'f-Black';
-  letter-spacing: 0.0625em;
+  letter-spacing: -0.03em;
 }
-.anchor {
-  display: block;
-  position: relative;
-  top: -50px;
-  visibility: hidden;
-  width: 100%;
-}
-.pagestart {
-  padding-top: 150px;
+.page {
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 .last {
   padding-bottom: 80px;
@@ -6089,22 +6063,11 @@ h1 {
   font-size: 60px;
 }
 .logo {
-  font-size: 80px;
-  padding-bottom: 10px;
-}
-.hey {
-  font-family: 'walsheim';
-}
-.sp {
-  color: #d3de25;
-  letter-spacing: 0.5;
+  padding-bottom: 20px;
 }
 .oh {
-  margin-top: -90px;
-}
-.oh > h1 {
-  font-size: 140px;
-  text-shadow: -3px 3px 0 #55216a;
+  margin-top: -68px;
+  padding-left: 24px;
 }
 .vem {
   font-size: 34px;
@@ -6117,9 +6080,15 @@ h1 {
   font-size: 30px !important;
   color: #742d91 !important;
 }
+.list-icon {
+  width: 1.5em;
+}
 @media (min-width: 992px) {
   .vemd {
     margin-top: -70px;
+  }
+  div.fb-like-box {
+    margin-left: -20px;
   }
   .overlap-md > div {
     margin-top: -20px;
@@ -6143,7 +6112,7 @@ h1 {
   box-shadow: -3px 3px 0px 2px #652a7e;
 }
 div.fb-like-box {
-  margin-left: -20px;
+  min-height: 300px;
 }
 div.fb-like-box,
 div.fb-like-box > span,
@@ -6179,60 +6148,18 @@ blockquote small {
   width: 20px;
   border-left: 4px solid #2face2;
 }
-.schedrow {
-  margin-top: -150px;
-}
-.pstart {
-  padding-top: -50px;
-}
-.schedtitle {
-  padding-top: 100px;
-  padding-bottom: 200px;
-}
-.schedtitle,
-.schedtitle:before,
-.schedtitle:after,
-.schedside,
-.schedside:before,
-.schedside:after {
+.green {
   background-color: #71be44;
-  box-shadow: 3px 3px 0px 2px #5a9a35;
+  padding-bottom: 300px;
+  border-bottom: 5px solid #5a9a35;
 }
-.schedtitle:after,
-.schedtitle:before,
-.schedside:after,
-.schedside:before {
-  content: "";
-  position: absolute;
-  width: 9999px;
-  height: 100%;
-}
-.schedtitle:before,
-.schedside:before {
-  z-index: -1;
-}
-.schedtitle:after {
-  top: 0;
-  left: 100%;
-}
-.schedtitle:before {
-  top: 0;
-  right: 100%;
-}
-.schedside:after {
-  top: 100%;
-  right: 0;
-}
-.schedside:before {
-  right: 100%;
+.green p,
+.green li {
+  color: white;
 }
 html,
 body {
   overflow-x: hidden;
-}
-.schedside {
-  color: white;
-  background-color: #71be44;
 }
 #gcal {
   width: 100% !important;
@@ -6244,6 +6171,9 @@ body {
   #gcal {
     height: 400px !important;
   }
+}
+.aftergreen {
+  margin-top: -300px;
 }
 .veja {
   font-family: 'smudger';
@@ -6316,7 +6246,7 @@ body {
   box-shadow: -2px 2px 0px 1px #b3b3b3;
 }
 .first {
-  margin-top: 100px !important;
+  margin-top: 70px !important;
 }
 .partner {
   margin-top: 20px;
