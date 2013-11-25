@@ -166,10 +166,6 @@ h1 {
     line-height: 0.9;
 }
 
-#carousel-home img {
-    // -webkit-filter: saturate(60%);
-}
-
 #ytplayer {
     box-shadow: -3px 3px 0px 2px #652A7E;
 }
@@ -210,14 +206,16 @@ blockquote small {
     text-shadow: -2px 2px 0 darken(@hey-yellow, 10%);
 }
 
-.infobox:after {
-    content: "";
-    position: absolute;
-    top: 15%;
-    right: 0;
-    height: 70%;
-    width: 20px;
-    border-left: 4px solid @hey-blue-light;
+@media (min-width: @screen-md-min) {
+    .textcol:before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 0;
+        height: 80%;
+        width: 20px;
+        border-left: 4px solid @hey-blue-light;
+    }
 }
 
 // ------------ schedule ------------
@@ -334,6 +332,10 @@ html, body {
 @input-color: @text-color;
 @input-color-placeholder: lighten(@text-color, 40%);
 
+.contacticon {
+    width: 120px;
+}
+
 .c2 h3 {
     font-family: "f-Book";
 }
@@ -351,6 +353,10 @@ html, body {
     bottom: 0
 }
 
+.parcol {
+    margin-left: 5%
+}
+
 .partner > div > img {
     box-shadow: -2px 2px 0px 1px darken(#ccc, 10%);
 }
@@ -362,4 +368,20 @@ html, body {
 
 .partner {
     margin-top: 20px;
+}
+
+// ------------ footer ------------
+
+.footerend {
+    margin-top: -110px;
+    padding-top: 200px;
+    background-color: @hey-orange;
+    border-top: 5px solid #C85D24;
+    z-index: -1000;
+}
+
+.footer {
+    background-color: #C85D24;
+    color: black;
+    padding-top: 1em;
 }

@@ -6138,14 +6138,16 @@ blockquote small {
   font-size: 100px;
   text-shadow: -2px 2px 0 #acb51b;
 }
-.infobox:after {
-  content: "";
-  position: absolute;
-  top: 15%;
-  right: 0;
-  height: 70%;
-  width: 20px;
-  border-left: 4px solid #2face2;
+@media (min-width: 992px) {
+  .textcol:before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 80%;
+    width: 20px;
+    border-left: 4px solid #2face2;
+  }
 }
 .green {
   background-color: #71be44;
@@ -6236,6 +6238,9 @@ body {
   box-shadow: 3px 3px 0px 2px #acb51b;
   z-index: -100;
 }
+.contacticon {
+  width: 120px;
+}
 .c2 h3 {
   font-family: "f-Book";
 }
@@ -6251,6 +6256,9 @@ body {
   position: absolute;
   bottom: 0;
 }
+.parcol {
+  margin-left: 5%;
+}
 .partner > div > img {
   box-shadow: -2px 2px 0px 1px #b3b3b3;
 }
@@ -6259,4 +6267,16 @@ body {
 }
 .partner {
   margin-top: 20px;
+}
+.footerend {
+  margin-top: -110px;
+  padding-top: 200px;
+  background-color: #f3702e;
+  border-top: 5px solid #C85D24;
+  z-index: -1000;
+}
+.footer {
+  background-color: #C85D24;
+  color: black;
+  padding-top: 1em;
 }
