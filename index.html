@@ -247,27 +247,29 @@
     <div class="page" id="contact">
    <div class="row">
         <div class="col-md-4 contato">
-        <form role="form" method="get" class="c2">
+        <form class="c2" id="form1" name="form1" enctype="multipart/form-data" method="post" novalidate
+      action="https://heysaopaulo.wufoo.com/forms/zdlp4h511pnwjr/#public">
+            <input type="hidden" name="idstamp" id="idstamp" value="edLcBcgM8w3iF8RNQF/TGBthLmIuJ7Oy/IAnzqxnEeY=">
             <div class="row">
                 <div class="col-xs-10">
                     <p class="text-center"><img src="imgs/contact.svg" class="contacticon"></p>
                     <h1 class="text-center">Contato</h1>
-                    <h3>Em caso de dúvidas ou se tiver sugestões, envie-nos uma mensagem</h3>
+                    <p>Para agendar seu passeio ou se tiver sugestões, envie-nos uma mensagem aqui ou por email em: <a href="mailto:hey@heysaopaulo.com.br">hey@heysaopaulo.com.br</a></p>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="nome">
+                            <input type="text" class="form-control" placeholder="nome" id="Field13" name="Field13">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="email">
+                            <input type="email" class="form-control" placeholder="email" id="Field9" name="Field9" type="email" >
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="assunto">
+                            <input type="text" class="form-control" placeholder="assunto" id="Field10" name="Field10">
                         </div>
-                        <textarea class="form-control" rows="3"></textarea>
+                        <textarea class="form-control" rows="3" id="Field11" name="Field11"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-2 col-xs-offset-10">
-                    <button class="btn send" type="submit">OK</button>
+                    <button class="btn send" type="submit" id="saveForm" name="saveForm" value="Enviar">OK</button>
                 </div>
             </div>
         </form>
