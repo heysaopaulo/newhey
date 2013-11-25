@@ -112,9 +112,8 @@ h1 {
 // ------------ Home row ------------
 
 .logo {
-    margin-top: -30px;
-    padding-bottom: 50px;
-    height: 100px;
+    max-height: 100px;
+    width: auto;
 }
 
 .oh {
@@ -124,7 +123,6 @@ h1 {
 
 .vem {
     font-size: 34px;
-    margin-top: 30px;
     color: @hey-orange;
 }
 
@@ -140,6 +138,15 @@ h1 {
 }
 
 @media (min-width: @screen-md-min) {
+    .logo {
+        margin-top: -30px;
+        padding-bottom: 50px;
+    }
+
+    .vem {
+        margin-top: 30px;
+    }
+
     .vemd {
         margin-top: -70px;
     }
@@ -222,9 +229,14 @@ blockquote small {
 
 @extra-green: 300px;
 
+@media (min-width: @screen-sm-min) {
+    .green {
+        padding-bottom: @extra-green;
+    }
+}
+
 .green {
     background-color: @hey-green;
-    padding-bottom: @extra-green;
     border-bottom: 5px solid darken(@hey-green, 10%);
 }
 
@@ -251,8 +263,10 @@ html, body {
 }
 
 // ------------ pics ------------
-.aftergreen {
-    margin-top: -@extra-green;
+@media (min-width: @screen-sm-min) {
+    .aftergreen {
+        margin-top: -@extra-green;
+    }
 }
 
 .veja {
@@ -276,32 +290,35 @@ html, body {
 .contato {
     background-color: @hey-yellow;
     padding-bottom: 50px;
+    padding-top: 10px;
     box-shadow: 3px 3px 0px 2px darken(@hey-yellow, 10%);
 }
 
-.contato:before {
-    content: '';
-    position: absolute;
-    left: 100%;
-    top: 0px;
-    width: 0;
-    height: 0;
-    border-top: 55px solid transparent;
-    border-bottom: 55px solid transparent;
-    border-left: 55px solid darken(@hey-yellow, 10%);
- }
+@media (min-width: @screen-md-min) {
+    .contato:before {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        width: 0;
+        height: 0;
+        border-top: 55px solid transparent;
+        border-bottom: 55px solid transparent;
+        border-left: 55px solid darken(@hey-yellow, 10%);
+     }
 
-.contato:after{
-    content: '';
-    position: absolute;
-    left: 100%;
-    top: 5px;
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid @hey-yellow;
-    // background-color: @hey-yellow;
+    .contato:after{
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 5px;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 50px solid @hey-yellow;
+        // background-color: @hey-yellow;
+    }
 }
 
 .c2:before {
@@ -316,16 +333,18 @@ html, body {
     z-index: -10;
 }
 
-.c2:after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    width: 9999px;
-    height: 60%;
-    background-color: @hey-yellow;
-    box-shadow: 3px 3px 0px 2px darken(@hey-yellow, 10%);
-    z-index: -100;
+@media (min-width: @screen-sm-min) {
+    .c2:after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        width: 9999px;
+        height: 60%;
+        background-color: @hey-yellow;
+        box-shadow: 3px 3px 0px 2px darken(@hey-yellow, 10%);
+        z-index: -100;
+    }
 }
 
 @input-border-radius: 0;
@@ -373,12 +392,20 @@ html, body {
 // ------------ footer ------------
 
 .footerend {
-    margin-top: -110px;
-    padding-top: 200px;
+    margin-top: -10px;
+    padding-top: 80px;
     background-color: @hey-orange;
     border-top: 5px solid #C85D24;
     z-index: -1000;
 }
+
+@media (min-width: @screen-sm-min) {
+    .footerend {
+        margin-top: -95px;
+        padding-top: 180px;
+    }
+}
+
 
 .footer {
     background-color: #C85D24;
