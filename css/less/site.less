@@ -213,12 +213,16 @@ blockquote small {
     text-shadow: -2px 2px 0 darken(@hey-yellow, 10%);
 }
 
+.textcol p {
+    font-size: 16px;
+}
+
 @media (min-width: @screen-md-min) {
     .textcol:before {
         content: "";
         position: absolute;
         top: 10%;
-        left: 0;
+        left: -5%;
         height: 80%;
         width: 20px;
         border-left: 4px solid @hey-blue-light;

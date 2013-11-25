@@ -6143,12 +6143,15 @@ blockquote small {
   font-size: 100px;
   text-shadow: -2px 2px 0 #acb51b;
 }
+.textcol p {
+  font-size: 16px;
+}
 @media (min-width: 992px) {
   .textcol:before {
     content: "";
     position: absolute;
     top: 10%;
-    left: 0;
+    left: -5%;
     height: 80%;
     width: 20px;
     border-left: 4px solid #2face2;
